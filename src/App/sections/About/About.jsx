@@ -15,7 +15,7 @@ function About() {
                                 <span className="label-text">lorem 40</span>
                             </span>
                             <h2 className="title-first-line">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet
                             </h2>
                         </div>
 

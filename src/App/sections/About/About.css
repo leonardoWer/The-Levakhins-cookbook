@@ -17,6 +17,7 @@
 .title-container {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .title-container__first-line {
     display: flex;
@@ -45,6 +46,9 @@
 .title-first-line, .title-another-lines {
     color: var(--brown);
     font-size: clamp(1rem, 0.19rem + 4.05vw, 5rem);
+}
+.title-first-line {
+    white-space: nowrap;
 }
 
 .description {

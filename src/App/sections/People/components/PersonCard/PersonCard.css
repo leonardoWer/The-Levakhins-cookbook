@@ -26,23 +26,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 5% 2%;
+    padding: 5% 4%;
     overflow: hidden;
 }
 
 .person-card__text-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    height: 80%;
+    height: 100%;
     overflow: hidden;
 }
 
 .text-container__title-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .person-card__title {
@@ -59,7 +58,7 @@
 .person-card__description {
     font-family: var(--stengazeta-font);
     color: var(--light-brown);
-    font-size: clamp(1.2rem, 0.633rem + 2.84vw, 4rem);
+    font-size: clamp(1.2rem, 0.835rem + 1.82vw, 3rem);
     text-wrap: balance;
     word-break: break-word;
 }
