@@ -1,4 +1,9 @@
 @font-face {
     font-family: "Stengazeta";
-    src: url("");
+    src: url("/fonts/Stengazeta.ttf");
+}
+
+@font-face {
+    font-family: "volante";
+    src: url("/fonts/1shelleyvolante.ttf");
 }

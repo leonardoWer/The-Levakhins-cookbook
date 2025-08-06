@@ -1,5 +1,9 @@
 :root {
     /* Цвета */
+    --light-bg: #fbf3e2;
+    --gray: #484848;
+    --brown: #481d16;
+    --light-brown: #a25f4f;
 
     /* Градиенты */
 
@@ -15,4 +19,8 @@
     /*  Отступы  */
     --section-padding: 10vh 6vw;
     --max-width: 3440px;
+
+    /*  Шрифты  */
+    --stengazeta-font: "Stengazeta", "Roboto", sans-serif;
+    --volante-font: "volante", "Roboto Light", sans-serif;
 }

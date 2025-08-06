@@ -1,8 +1,12 @@
 /* Общие параметры */
 body {
-
+    font-family: var(--stengazeta-font);
+    background-color: var(--light-bg);
 }
 
 
 /* Выделение мыши */
-::selection {}
+::selection {
+    background: var(--light-bg);
+    color: var(--brown);
+}
