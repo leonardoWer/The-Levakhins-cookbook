@@ -13,7 +13,7 @@ function About() {
 
                         <div className="title-container__first-line">
                             <span className="title-label">
-                                <i className="label-icon"></i>
+                                <i className="circle-icon"></i>
                                 <span className="label-text">О нас</span>
                             </span>
                             <h2 className="title-first-line">

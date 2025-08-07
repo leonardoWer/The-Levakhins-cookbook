@@ -38,12 +38,6 @@
     font-family: var(--volante-font);
     font-size: clamp(0.8rem, 0.354rem + 2.23vw, 3rem);
 }
-.label-icon {
-    clip-path: circle();
-    background-color: var(--light-brown);
-    height: 10px;
-    width: 10px;
-}
 
 .title-first-line, .title-another-lines {
     color: var(--brown);
