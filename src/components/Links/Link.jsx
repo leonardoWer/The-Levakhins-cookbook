@@ -1,11 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import gsap from 'gsap';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
 function BaseLink({title, onClick, className}) {
+
+    const navigate = useNavigate();
 
     let linkProps = {
         className: className ? className : '',
@@ -32,6 +34,11 @@ function BaseLink({title, onClick, className}) {
             }
         }
 
+        const handlePageNavigation = (event) => {
+            event.preventDefault();
+            navigate(onClick.page);
+        }
+
         if (onClick.link) {
             // Внешняя ссылка
             linkProps.href = onClick.link;
@@ -40,9 +47,12 @@ function BaseLink({title, onClick, className}) {
             if (onClick.title) {
                 linkProps.title = onClick.title;
             }
-        } else if (onClick && typeof onClick === 'object' && onClick.href) {
+        } else if (onClick.href) {
             linkProps.href = `#${onClick.href}`;
             linkProps.onClick = handlePageScroll;
+        } else if (onClick.page) {
+            linkProps.href = `#${onClick.page}`;
+            linkProps.onClick = handlePageNavigation;
         }
     } else {
         console.warn("onClick must be an object!")
