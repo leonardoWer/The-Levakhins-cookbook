@@ -1,6 +1,6 @@
 import "./Home.css"
 
-function Header() {
+function HomePage() {
     return (
         <header className="header">
             <img className="header-bg" src="img/header-bg.png" alt="bg" />
@@ -8,4 +8,4 @@ function Header() {
     )
 }
 
-export default Header;
+export default HomePage;
