@@ -1,5 +1,7 @@
 import "./About.css"
 
+import RectangleLink from "s/components/Links/RectangleLink/RectangleLink.jsx"
+
 function About() {
     return (
         <section id="aboutSection">
@@ -31,7 +33,7 @@ function About() {
                 </div>
 
                 <div className="toc-button-container">
-
+                    <RectangleLink title="Оглавление" onClick={{page: "toc"}}/>
                 </div>
 
             </div>

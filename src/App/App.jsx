@@ -22,7 +22,7 @@ function App() {
         if (horizontalScrollContainer.current && horizontalScrollWrapper.current) {
 
             function getScrollAmount() {
-                const totalWidth = horizontalScrollContainer.current.offsetWidth;
+                const totalWidth = horizontalScrollContainer.current.offsetWidth + 100;
                 return -(totalWidth - window.innerWidth); // Вся ширина минус разрешение экрана
             }
 

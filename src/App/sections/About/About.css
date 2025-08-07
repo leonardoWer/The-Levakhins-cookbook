@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     padding: 0 10vw;
+    position: relative;
 }
 
 .about-text-container {
@@ -56,4 +57,10 @@
     width: 40%;
     color: var(--light-brown);
     font-size: clamp(0.6rem, 0.357rem + 1.22vw, 1.8rem);
+}
+
+.toc-button-container {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
 }

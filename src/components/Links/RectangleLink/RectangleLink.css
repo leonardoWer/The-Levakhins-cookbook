@@ -1,0 +1,13 @@
+.rectangle-link {
+    color: var(--light-brown);
+    border: 1px solid var(--gray);
+    padding: 2rem 3rem 1.5rem 3rem;
+    font-size: clamp(0.8rem, 0.557rem + 1.22vw, 2rem);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.rectangle-link:hover {
+    background: var(--light-brown);
+    color: white;
+}
