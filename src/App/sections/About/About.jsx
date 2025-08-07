@@ -12,20 +12,20 @@ function About() {
                         <div className="title-container__first-line">
                             <span className="title-label">
                                 <i className="label-icon"></i>
-                                <span className="label-text">lorem 40</span>
+                                <span className="label-text">О нас</span>
                             </span>
                             <h2 className="title-first-line">
-                                Lorem ipsum dolor sit amet
+                                Книга рецептов семьи Левахиных
                             </h2>
                         </div>
 
                         <h2 className="title-another-lines">
-                            Enim eveniet placeat quae recusandae unde. Accusamus at neque nisi officia porro possimus quaerat quis sapiente. Aut, earum eum itaque odit ratione tempora. Cumque, natus, sequi? Animi eius id impedit mollitia veritatis.
+                             - это не просто сборник рецептов. Здесь мы делимся любимыми и проверенными рецептами, которые накопились в нашей семье за долгие годы
                         </h2>
                     </div>
 
                     <p className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloribus eum facilis nemo nostrum, rem sit voluptatum. Doloribus nam, odit?
+                        От бабушкиных секретов до наших собственных кулинарных экспериментов. Каждое блюдо - это частичка нашей семьи, которой мы рады поделиться с вами.
                     </p>
 
                 </div>
