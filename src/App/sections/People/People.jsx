@@ -16,14 +16,14 @@ function People() {
             title: "Левахин Лев",
             role: "Муж",
             description: "1231",
-            img: ''
+            img: null,
         },
         {
             id: 2,
             title: "Дарья Раева",
             role: "Жена",
             description: "123",
-            img: ''
+            img: null,
         },
     ]);
 
@@ -35,17 +35,17 @@ function People() {
     useEffect(() => {
         // Создаем ScrollTrigger только после монтирования компонента
         if (containerRef.current && parentRef.current && personsData.length > 0) {
-            // Сначала, анимируем каждую карточку, чтобы она поднималась
-            cardRefs.current = personsData.map((_, i) => cardRefs.current[i] || useRef()); // Инициализируем refs
+            // Инициализируем refs
+            cardRefs.current = personsData.map((_, i) => cardRefs.current[i] || useRef());
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: parentRef.current,
-                    start: "bottom bottom",
-                    end: "+=3000",
+                    start: "top top",
+                    end: "+=2800",
                     scrub: true,
                     pin: true,
-                    pinSpacing: true,
+                    invalidateOnRefresh: true,
                 },
             })
 

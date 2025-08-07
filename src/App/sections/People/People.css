@@ -1,17 +1,19 @@
 .people-content-container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: var(--brown);
 }
 
 .people-bg {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .person-cards-container {

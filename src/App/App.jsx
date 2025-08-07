@@ -16,29 +16,35 @@ function App() {
 
     const horizontalScrollWrapper = useRef(null);
     const horizontalScrollContainer = useRef(null);
+    const spacerWrapper = useRef(null);
 
     useEffect(() => {
-        if (horizontalScrollContainer.current) {
+        if (horizontalScrollContainer.current && horizontalScrollWrapper.current) {
 
             function getScrollAmount() {
                 const totalWidth = horizontalScrollContainer.current.offsetWidth;
                 return -(totalWidth - window.innerWidth); // Вся ширина минус разрешение экрана
             }
 
+            const spacer = document.createElement("div");
+            spacer.style.height = `${getScrollAmount() / -2}px`;
+            spacerWrapper.current.parentNode.insertBefore(spacer, spacerWrapper.current.nextSibling);
+
             const hs = gsap.to(horizontalScrollContainer.current, {
                 x: () => getScrollAmount(),
                 ease: "none",
-                duration: 3,
+                duration: 2,
             });
 
             ScrollTrigger.create({
                 trigger: horizontalScrollWrapper.current,
-                pin: true,
                 start: "top top",
                 end: `+=${getScrollAmount() * -1}`,
                 scrub: 1,
                 invalidateOnRefresh: true,
-                animation: hs
+                animation: hs,
+                pin: true,
+                pinSpacing: false,
             })
 
             // Clean up function (важно!)
@@ -58,6 +64,8 @@ function App() {
                 <About />
             </div>
         </div>
+
+        <div className="spacer-wrapper" ref={spacerWrapper}></div>
 
         <People />
 
