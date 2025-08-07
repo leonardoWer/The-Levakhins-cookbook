@@ -10,20 +10,26 @@ import PersonCard from "./components/PersonCard/PersonCard.jsx";
 
 function People() {
 
+    const photoPath = "img/persons/"
+
     const [personsData, setPersonsData] = useState([
         {
             id: 1,
             title: "Левахин Лев",
             role: "Муж",
-            description: "1231",
-            img: null,
+            description: "Готовка для меня – это способ проявить заботу о себе и близких. " +
+                "В нашей семье я часто беру на себя роль шеф-повара и готовлю самые разные и интересные блюда. " +
+                "На сайте я хочу поделиться нашими семейными рецептами, которые делают нашу жизнь вкуснее",
+            img: photoPath + "lev.png",
         },
         {
             id: 2,
             title: "Дарья Раева",
             role: "Жена",
-            description: "123",
-            img: null,
+            description: "Готовка для меня - это способ проявить заботу. " +
+                "Больше всего мне нравится работать с тестом, создавать сладости, украшать блюда - " +
+                "превращать простые рецепты в настоящие произведения искусства",
+            img: photoPath + "daria.png",
         },
     ]);
 
