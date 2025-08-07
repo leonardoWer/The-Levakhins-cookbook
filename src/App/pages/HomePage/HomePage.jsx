@@ -52,7 +52,7 @@ function HomePage() {
     }, []);
 
     return (
-        <>
+        <div>
             <div className="horizontal-scroll-container-wrapper" ref={horizontalScrollWrapper}>
                 <div className="horizontal-scroll-container" ref={horizontalScrollContainer}>
                     <Home/>
@@ -64,7 +64,7 @@ function HomePage() {
 
             <People/>
 
-        </>
+        </div>
     )
 }
 

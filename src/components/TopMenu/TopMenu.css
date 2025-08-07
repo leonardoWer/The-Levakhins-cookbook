@@ -54,4 +54,6 @@
     padding: 0 4rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    color: var(--gray) !important;
 }

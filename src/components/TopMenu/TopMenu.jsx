@@ -1,7 +1,7 @@
 import "./TopMenu.css"
 
 import React from "react";
-// import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function TopMenu() {
     return (
@@ -9,7 +9,9 @@ function TopMenu() {
 
             <div className="top-menu__left">
                 <div className="logo-container">
-                    <img className="logo" src="img/book.png" alt="logo"/>
+                    <NavLink to="/">
+                        <img className="logo" src="img/book.png" alt="logo"/>
+                    </NavLink>
                 </div>
 
                 <div className="description-container">
@@ -21,9 +23,11 @@ function TopMenu() {
 
             <div className="top-menu__right">
                 <ul className="top-menu-list">
-                    <li className="top-menu-list__item">
+
+                    <NavLink to="/toc" className="top-menu-list__item">
                         Оглавление
-                    </li>
+                    </NavLink>
+
                     <li className="top-menu-list__item">
                         О нас
                     </li>
