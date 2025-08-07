@@ -6,7 +6,6 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import TopMenu from "s/components/TopMenu/index.js";
 import Home from "./sections/Home/Home.jsx";
 import About from "./sections/About/About.jsx";
 import People from "./sections/People/People.jsx";
@@ -54,8 +53,6 @@ function HomePage() {
 
     return (
         <>
-            <TopMenu/>
-
             <div className="horizontal-scroll-container-wrapper" ref={horizontalScrollWrapper}>
                 <div className="horizontal-scroll-container" ref={horizontalScrollContainer}>
                     <Home/>
