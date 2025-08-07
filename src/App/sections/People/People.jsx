@@ -49,7 +49,7 @@ function People() {
                     trigger: parentRef.current,
                     start: "top top",
                     end: "+=2800",
-                    scrub: true,
+                    scrub: 1.8,
                     pin: true,
                     invalidateOnRefresh: true,
                 },
@@ -64,11 +64,13 @@ function People() {
                     i * 0.5)
 
                 if (i < personsData.length - 1) {
-                    tl.to(
-                            cardRef.current,
-                            { opacity: 0, duration: 0.3, ease: "power1.inOut" }, // Постепенное исчезновение
-                            i * 0.5 + 0.5 // Начинаем исчезновение после появления
-                        );
+                    tl.to(cardRef.current, {
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power1.inOut"
+                        },
+                        i * 0.5 + 0.5 // Начинаем исчезновение после появления
+                    );
                 }
 
             });
