@@ -1,0 +1,35 @@
+.toc-item {
+    display: flex;
+    gap: 5%;
+}
+
+.toc-item__number {
+    font-family: var(--volante-font);
+    font-size: clamp(2.2rem, 1.349rem + 4.25vw, 6.4rem);
+    line-height: 0.35;
+}
+
+
+.toc-item__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.toc-item__title {
+    color: var(--brown);
+    font-size: clamp(1.2rem, 0.633rem + 2.84vw, 4rem);
+}
+
+.toc-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.toc-item-list__recipe-item {
+    color: var(--light-brown);
+    display: flex;
+    gap: 2rem;
+    font-size: clamp(0.8rem, 0.557rem + 1.22vw, 2rem);
+    cursor: pointer;
+}
