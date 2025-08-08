@@ -3,6 +3,8 @@ import "./TopMenu.css"
 import React from "react";
 import { Link, NavLink } from 'react-router-dom'
 
+import bookImg from "/img/book.png";
+
 function TopMenu() {
     return (
         <nav className="top-menu">
@@ -10,7 +12,7 @@ function TopMenu() {
             <div className="top-menu__left">
                 <div className="logo-container">
                     <NavLink to="/">
-                        <img className="logo" src="img/book.png" alt="logo"/>
+                        <img className="logo" src={bookImg} alt="logo"/>
                     </NavLink>
                 </div>
 
@@ -23,17 +25,15 @@ function TopMenu() {
 
             <div className="top-menu__right">
                 <ul className="top-menu-list">
-
                     <NavLink to="/toc" className="top-menu-list__item">
                         Оглавление
                     </NavLink>
-
-                    <li className="top-menu-list__item">
+                    <NavLink to="/" className="top-menu-list__item">
                         О нас
-                    </li>
-                    <li className="top-menu-list__item">
+                    </NavLink>
+                    <NavLink to="/" className="top-menu-list__item">
                         Контакты
-                    </li>
+                    </NavLink>
                 </ul>
             </div>
 

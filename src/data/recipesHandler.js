@@ -7,7 +7,7 @@ import {rawRecipeGroupsData} from "./rawRecipesData.js";
  *  - `flatRecipes`   – один плоский массив (если понадобится)
  */
 
-const imgPath = "img/recipes/"
+const IMG_PATH = (import.meta.env.BASE_URL ?? '/The-Levakhins-cookbook') + "/img/recipes/"
 
 export function handleRawRecipesData() {
     let autoId = 1;
@@ -16,7 +16,7 @@ export function handleRawRecipesData() {
         recipes: group.recipes.map(recipe => ({
             id: autoId++,
             ...recipe,
-            img: recipe.img ? imgPath + recipe.img : null,
+            img: recipe.img ? IMG_PATH + recipe.img : null,
         }))
     }));
 }
@@ -39,7 +39,6 @@ export function buildLookup(recipesFlat) {
  */
 
 export const recipeGroupsData = handleRawRecipesData(); // Исходный массив но с id
-console.log(recipeGroupsData);
 export const recipesFlat = recipeGroupsData.flatMap(group => group.recipes); // Список всех рецептов
 export const recipeById = buildLookup(recipesFlat); // Мапа id -> recipeObj
 
