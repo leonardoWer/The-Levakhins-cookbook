@@ -38,12 +38,30 @@
     font-size: clamp(0.8rem, 0.476rem + 1.62vw, 2.4rem);
 }
 
-.title-text {
+.info-text {
     color: var(--light-brown);
-    font-size: clamp(1.2rem, 0.835rem + 1.82vw, 3rem);
+    font-size: clamp(0.6rem, 0.357rem + 1.22vw, 1.8rem);
 }
 
+/* Блоки с ингридиентами и инструкциями */
+.topic-title-text {
+    color: var(--brown);
+    font-size: clamp(1.2rem, 0.835rem + 1.82vw, 3rem);
+    margin-bottom: 1rem;
+}
 
+.ingredients-container__list {
+    columns: 2;
+    column-gap: 1rem;
+}
+.ingredients-item {
+    color: var(--light-brown);
+    font-size: clamp(0.6rem, 0.397rem + 1.01vw, 1.6rem);
+    break-inside: avoid;
+    margin-bottom: 1rem;
+}
+
+/* Фото */
 .recipe__right {
     position: fixed;
     top: 0;

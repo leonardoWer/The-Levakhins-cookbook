@@ -4,12 +4,12 @@ import {useParams} from "react-router-dom";
 
 import {recipeById} from "s/data/recipesHandler.js";
 
+import StepItem from "./components/StepItem/StepItem.jsx";
 
 function RecipePage() {
 
-    const { id } = useParams();
+    const {id} = useParams();
     const recipe = recipeById.get(Number(id));
-    console.log(recipe);
 
     return (
         <div className="recipe-content-container">
@@ -29,13 +29,21 @@ function RecipePage() {
                 </div>
 
                 <div className="ingredients-container border-bottom-container">
-                    <div className="title-text">Ингридиенты</div>
+                    <div className="topic-title-text">Ингридиенты</div>
 
-                    <ul className="ingredients-container__list"></ul>
+                    <ul className="ingredients-container__list">
+                        {recipe.ingredients.map((item, index) => (
+                            <li className="ingredients-item" key={index}>{item}</li>
+                        ))}
+                    </ul>
                 </div>
 
                 <div className="instructions-container">
-                    <div className="title-text">Инструкции</div>
+                    <div className="topic-title-text">Инструкции</div>
+
+                    {recipe.steps.map((step, index) => (
+                        <StepItem key={index} step={step} />
+                    ))}
 
                 </div>
 
