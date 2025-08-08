@@ -52,7 +52,7 @@ function RecipePage() {
 
             <div className="recipe__right">
                 <div className="recipe__right__img-container">
-                    <img src="img/book.png" alt=""/>
+                    <img src={recipe.img ?? null} alt={recipe.title} />
                 </div>
             </div>
 
