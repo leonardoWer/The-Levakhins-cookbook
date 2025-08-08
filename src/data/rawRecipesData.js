@@ -5,7 +5,7 @@ export const rawRecipeGroupsData = [
             {
                 title: "Борщ",
                 info: "Порций: 6  | Будет готово через: 3 часа",
-                img: null,
+                img: "borsh.png",
                 ingredients: [
                     "2 свёклы (500 грамм)",
                     "1 капуста (300 грамм)",
@@ -52,7 +52,7 @@ export const rawRecipeGroupsData = [
             {
                 title: "Картошка айдахо",
                 info: "Порций: 6  | Будет готово через: 1 час",
-                img: null,
+                img: "aidaho-potato.jpg",
                 ingredients: [
                     "6 картошек (1 кг | сколько влезет на противень)",
                     "Специи по вкусу: соль, чеснок, сушёный укроп, для картошки, перец, куркума, паприка, перец чили",
@@ -131,7 +131,7 @@ export const rawRecipeGroupsData = [
             {
                 title: "Смузи из чёрной смородины",
                 info: "Порций: 2  | Будет готово через: 10 минут",
-                img: null,
+                img: "smuzi-chernaya-smorodina.jpg",
                 ingredients: [
                     "1 стакан чёрной смородины (100-150 грамм)",
                     "Пол стакана крыжовника (<=50 грамм)",

@@ -7,13 +7,16 @@ import {rawRecipeGroupsData} from "./rawRecipesData.js";
  *  - `flatRecipes`   – один плоский массив (если понадобится)
  */
 
-export function generateIds() {
+const imgPath = "img/recipes/"
+
+export function handleRawRecipesData() {
     let autoId = 1;
     return rawRecipeGroupsData.map(group => ({
         ...group,
-        recipes: group.recipes.map(r => ({
+        recipes: group.recipes.map(recipe => ({
             id: autoId++,
-            ...r,
+            ...recipe,
+            img: recipe.img ? imgPath + recipe.img : null,
         }))
     }));
 }
@@ -35,7 +38,8 @@ export function buildLookup(recipesFlat) {
  * Генерируем «памяти» за один раз и экспортируем.
  */
 
-export const recipeGroupsData = generateIds(); // Исходный массив но с id
+export const recipeGroupsData = handleRawRecipesData(); // Исходный массив но с id
+console.log(recipeGroupsData);
 export const recipesFlat = recipeGroupsData.flatMap(group => group.recipes); // Список всех рецептов
 export const recipeById = buildLookup(recipesFlat); // Мапа id -> recipeObj
 
