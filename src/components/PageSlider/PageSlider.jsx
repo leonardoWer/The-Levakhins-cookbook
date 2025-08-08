@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 function PageSlider({currentPage, totalPages, baseUrl="/recipe", isTocPage=false}) {
 
-    const hasPrevious = isTocPage || currentPage > 1;
+    const hasPrevious = !isTocPage || currentPage > 1;
     const hasNext = currentPage < totalPages || isTocPage;
 
     // Ссылка для перехода назад
-    const previousLink = isTocPage ? null : (currentPage === 1 ? '/toc' : `${baseUrl}/${currentPage - 1}`);
+    const previousLink = isTocPage===true ? null : (currentPage === 1 ? '/toc' : `${baseUrl}/${currentPage - 1}`);
 
     // Ссылка для перехода вперед
-    const nextLink = isTocPage ? `${baseUrl}/1` : `${baseUrl}/${currentPage + 1}`;
+    const nextLink = isTocPage===true ? `${baseUrl}/1` : `${baseUrl}/${currentPage + 1}`;
 
     return (
         <nav className="page-slider">
@@ -21,7 +21,7 @@ function PageSlider({currentPage, totalPages, baseUrl="/recipe", isTocPage=false
                         <i className="fa fa-arrow-left"></i>
                     </Link>
                 ) : (
-                    <span className="flink__disabled">
+                    <span className="page-slider__link link-disabled">
                         <i className="fa fa-arrow-left"></i>
                     </span>
                 )}
@@ -37,7 +37,7 @@ function PageSlider({currentPage, totalPages, baseUrl="/recipe", isTocPage=false
                         <i className="fa fa-arrow-right"></i>
                     </Link>
                 ) : (
-                    <span className="link__disabled">
+                    <span className="page-slider__link link-disabled">
                         <i className="fa fa-arrow-right"></i>
                     </span>
                 )}

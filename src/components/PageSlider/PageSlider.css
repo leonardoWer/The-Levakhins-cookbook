@@ -24,7 +24,7 @@
 .page-slider__link {
     padding: 0 2rem;
     font-size: clamp(0.6rem, 0.357rem + 1.22vw, 1.8rem);
-    color: var(--light-brown) !important;
+    color: var(--light-brown);
 }
 
 .link-disabled {
