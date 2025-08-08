@@ -17,8 +17,8 @@ function TocItem({titleNumber, title, itemsData}) {
                 <ul className="toc-item__list">
 
                     {itemsData.map((item) => (
-                        <Link to={`/recipe/${item.id}`} className="recipe-link">
-                            <li key={item.id} className="toc-item-list__recipe-item">
+                        <Link to={`/recipe/${item.id}`} key={item.id}  className="recipe-link">
+                            <li className="toc-item-list__recipe-item">
                                 <span className="recipe-item__number">{item.id}</span>
                                 <span className="recipe-item__title">{item.title}</span>
                             </li>
