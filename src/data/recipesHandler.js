@@ -41,4 +41,5 @@ export function buildLookup(recipesFlat) {
 export const recipeGroupsData = handleRawRecipesData(); // Исходный массив но с id
 export const recipesFlat = recipeGroupsData.flatMap(group => group.recipes); // Список всех рецептов
 export const recipeById = buildLookup(recipesFlat); // Мапа id -> recipeObj
+export const totalRecipesCount = recipesFlat.length;
 

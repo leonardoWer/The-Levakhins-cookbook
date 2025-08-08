@@ -2,9 +2,13 @@ import "./Toc.css"
 
 import TocItem from "./components/TocItem/TocItem.jsx";
 
-import {recipeGroupsData} from "s/data/recipesHandler.js";
+import {recipeGroupsData, totalRecipesCount} from "s/data/recipesHandler.js";
+import PageSlider from "s/components/PageSlider/PageSlider.jsx";
 
 function Toc() {
+
+
+
     return (
         <section id="tocSection">
             <div className="toc-content-container">
@@ -24,9 +28,9 @@ function Toc() {
                 <div className="toc__right">
                     <h2 className="toc-right__title">Оглавление</h2>
 
-                    <div className="toc-right__img-container">
-                        <img src="img/book.png" alt=""/>
-                    </div>
+                    <div className="toc-right__img-container"></div>
+
+                    <PageSlider currentPage={0} totalPages={totalRecipesCount} isTocPage={true} />
                 </div>
 
             </div>
