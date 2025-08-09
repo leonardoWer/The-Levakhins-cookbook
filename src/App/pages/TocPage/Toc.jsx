@@ -79,12 +79,15 @@ function Toc() {
                         </div>
 
                         <div className="img-container__recipe-img-container">
-                            <RecipeTile imgSrc={recipeImgSrc} tagsData={recipeTagsData}/>
+                            {recipeImgSrc ?
+                                <RecipeTile imgSrc={recipeImgSrc} tagsData={recipeTagsData}/> : ""
+                            }
                         </div>
 
                     </div>
 
                     <PageSlider currentPage={0} totalPages={totalRecipesCount} isTocPage={true}/>
+
                 </div>
 
             </div>
