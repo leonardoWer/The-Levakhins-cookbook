@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {recipeById, totalRecipesCount} from "s/data/recipesHandler.js";
 
 import StepItem from "./components/StepItem/StepItem.jsx";
+import RecipeTile from "s/App/pages/TocPage/components/RecipeTile/RecipeTile.jsx";
 import PageSlider from "s/components/PageSlider/PageSlider.jsx";
 
 function RecipePage() {
@@ -52,9 +53,8 @@ function RecipePage() {
 
 
             <div className="recipe__right">
-                <div className="recipe__right__img-container">
-                    <img src={recipe.img ?? null} alt={recipe.title} />
-                </div>
+
+                <RecipeTile imgSrc={recipe.img} tagsData={recipe.tags} />
 
                 <PageSlider currentPage={Number(id)} totalPages={totalRecipesCount} />
             </div>
