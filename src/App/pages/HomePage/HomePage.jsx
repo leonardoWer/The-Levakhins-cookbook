@@ -24,7 +24,7 @@ function HomePage() {
             }
 
             const spacer = document.createElement("div");
-            spacer.style.height = `${getScrollAmount() / -2}px`;
+            spacer.style.height = `${getScrollAmount() * -1}px`;
             spacerWrapper.current.parentNode.insertBefore(spacer, spacerWrapper.current.nextSibling);
 
             const hs = gsap.to(horizontalScrollContainer.current, {
