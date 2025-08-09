@@ -7,6 +7,6 @@ body {
 
 /* Выделение мыши */
 ::selection {
-    background: var(--light-bg);
-    color: var(--brown);
+    background: var(--red);
+    color: var(--light-bg);
 }
