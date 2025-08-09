@@ -1,0 +1,22 @@
+.step-container {
+    margin-top: 0.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.step-title {
+    color: var(--gray);
+    font-size: clamp(1rem, 0.757rem + 1.22vw, 2.2rem);
+    margin-bottom: 0.6rem;
+}
+
+.step-description {
+    color: var(--light-brown);
+    font-size: clamp(0.6rem, 0.397rem + 1.01vw, 1.6rem);
+    line-height: 1.1;
+}
+
+.step-img {
+    width: 100%;
+    height: 40vh;
+    object-position: center;
+}

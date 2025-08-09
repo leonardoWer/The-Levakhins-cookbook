@@ -1,0 +1,60 @@
+.about-content-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+    position: relative;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 80%;
+}
+
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.title-container__first-line {
+    display: flex;
+    gap: 2rem;
+}
+
+.title-label {
+    height: fit-content;
+    color: var(--light-brown);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.label-text {
+    text-wrap: nowrap;
+    font-family: var(--volante-font);
+    font-size: clamp(0.8rem, 0.354rem + 2.23vw, 3rem);
+}
+
+.title-first-line, .title-another-lines {
+    color: var(--brown);
+    font-size: clamp(1rem, 0.19rem + 4.05vw, 5rem);
+}
+.title-first-line {
+    white-space: nowrap;
+}
+
+.description {
+    width: 40%;
+    color: var(--light-brown);
+    font-size: clamp(0.6rem, 0.357rem + 1.22vw, 1.8rem);
+}
+
+.toc-button-container {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+}

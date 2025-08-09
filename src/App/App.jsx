@@ -1,25 +1,27 @@
-import { useState } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Routes, Route } from "react-router-dom";
 
-  return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+import TopMenu from "s/components/TopMenu/index.js";
+import HomePage from "s/App/pages/HomePage/HomePage.jsx";
+import Toc from "s/App/pages/TocPage/Toc.jsx";
+import RecipePage from "s/App/pages/RecipePage/RecipePage.jsx";
+
+function App() {
+    return (
+        <div>
+            <TopMenu/>
+
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/toc" element={<Toc />} />
+                <Route path="/recipe/:id" element={<RecipePage />} />
+
+                {/* 404 */}
+                <Route path="*" element={<h1>404: Страница не найдена</h1>} />
+            </Routes>
+        </div>
+    )
 }
 
 export default App
