@@ -12,6 +12,8 @@
     /* Отступы */
     --rectangle-padding: 2rem 4rem;
 
+    --gray-border: 1px solid var(--gray);
+
     /*  Шрифты  */
     --stengazeta-font: "Stengazeta", "Roboto", sans-serif;
     --volante-font: "volante", "Roboto Light", sans-serif;

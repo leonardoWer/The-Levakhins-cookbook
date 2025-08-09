@@ -22,7 +22,8 @@ export const rawRecipeGroupsData = [
                         description: "",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Согревает", "Наесться"]
             },
 
         ]
@@ -47,7 +48,8 @@ export const rawRecipeGroupsData = [
                         "",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Семейный ужин", "На новый год"]
             },
             {
                 title: "Картошка айдахо",
@@ -78,7 +80,8 @@ export const rawRecipeGroupsData = [
                             "Это очень ответственный момент, главное не передержать картошку, иначе корочка подгорит.",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Под фильмец", "Картошка фри дома"]
             },
             {
                 title: "Мясной рулет c грибами",
@@ -96,7 +99,8 @@ export const rawRecipeGroupsData = [
                         description: "",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Необычно"]
             },
 
         ]
@@ -120,7 +124,8 @@ export const rawRecipeGroupsData = [
                         description: "",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Быстро"]
             },
 
         ]
@@ -146,7 +151,8 @@ export const rawRecipeGroupsData = [
                         "Если хотите послаще, добавляйте до 6 ложек.",
                         img: null,
                     },
-                ]
+                ],
+                tags: ["Кисло", "В жару", "Охладиться", "После тренировки"]
             }
         ]
     }

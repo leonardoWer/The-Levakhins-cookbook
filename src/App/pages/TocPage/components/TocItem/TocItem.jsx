@@ -2,7 +2,8 @@ import "./TocItem.css";
 
 import { Link } from 'react-router-dom';
 
-function TocItem({titleNumber, title, itemsData}) {
+function TocItem({titleNumber, title, itemsData, onRecipeMouseEnter}) {
+
     return (
         <div className="toc-item">
 
@@ -18,7 +19,8 @@ function TocItem({titleNumber, title, itemsData}) {
 
                     {itemsData.map((item) => (
                         <Link to={`/recipe/${item.id}`} key={item.id}  className="recipe-link">
-                            <li className="toc-item-list__recipe-item">
+                            <li className="toc-item-list__recipe-item"
+                                onMouseEnter={() => onRecipeMouseEnter(item.img, item.tags)}>
                                 <span className="recipe-item__number">{item.id}</span>
                                 <span className="recipe-item__title">{item.title}</span>
                             </li>
@@ -31,7 +33,6 @@ function TocItem({titleNumber, title, itemsData}) {
 
         </div>
     )
-
 }
 
 export default TocItem;
