@@ -1,6 +1,7 @@
 import './App.css'
 
-import { Routes, Route } from "react-router-dom";
+import {useEffect} from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import TopMenu from "s/components/TopMenu/index.js";
 import HomePage from "s/App/pages/HomePage/HomePage.jsx";
@@ -9,6 +10,18 @@ import RecipePage from "s/App/pages/RecipePage/RecipePage.jsx";
 import R404 from "s/App/pages/R404/R404.jsx";
 
 function App() {
+
+    // gh-pages SPA Fix
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+
+        if (redirect && redirect !== window.location.pathname) {
+            navigate(redirect, { replace: true });
+        }
+    }, [navigate]);
 
     return (
         <div>
