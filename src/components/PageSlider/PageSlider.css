@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     color: var(--light-brown);
+    overflow: hidden;
 }
 
 .page-slider__left,
@@ -13,12 +14,17 @@
     justify-content: center;
     border: 1px solid var(--gray);
     height: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1em;
+    width: 20%;
 }
 
 .page-slider__center {
     flex: 1;
     font-size: clamp(1rem, 0.635rem + 1.82vw, 2.8rem);
+    border-right: none;
+    border-left: none;
+    white-space: nowrap;
+    width: 60%;
 }
 
 .page-slider__link {
