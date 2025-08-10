@@ -1,6 +1,7 @@
 import "./RecipePage.css"
 
-import {useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {useParams, useNavigate} from "react-router-dom";
 
 import {recipeById, totalRecipesCount} from "s/data/recipesHandler.js";
 
@@ -11,7 +12,23 @@ import PageSlider from "s/components/PageSlider/PageSlider.jsx";
 function RecipePage() {
 
     const {id} = useParams();
-    const recipe = recipeById.get(Number(id));
+    const navigate = useNavigate();
+    const [recipe, setRecipe] = useState(null);
+
+    useEffect(() => {
+        const fetchedRecipe = recipeById.get(Number(id));
+
+        if (!fetchedRecipe) {
+            navigate("/404", { replace: true });
+        } else {
+            setRecipe(fetchedRecipe);
+        }
+    }, [id, navigate]);
+
+    // Если recipe все еще null, отображаем сообщение о загрузке или ничего
+    if (!recipe) {
+        return <img src="img/logo/logo.png" alt="loading..."/>;
+    }
 
     return (
         <div className="recipe-content-container">

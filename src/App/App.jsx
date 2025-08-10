@@ -6,8 +6,10 @@ import TopMenu from "s/components/TopMenu/index.js";
 import HomePage from "s/App/pages/HomePage/HomePage.jsx";
 import Toc from "s/App/pages/TocPage/Toc.jsx";
 import RecipePage from "s/App/pages/RecipePage/RecipePage.jsx";
+import R404 from "s/App/pages/R404/R404.jsx";
 
 function App() {
+
     return (
         <div>
             <TopMenu/>
@@ -18,7 +20,7 @@ function App() {
                 <Route path="/recipe/:id" element={<RecipePage />} />
 
                 {/* 404 */}
-                <Route path="*" element={<h1>404: Страница не найдена</h1>} />
+                <Route path="*" element={<R404 />} />
             </Routes>
         </div>
     )
