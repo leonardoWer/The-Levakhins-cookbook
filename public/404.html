@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
+    const ROOT = (import.meta.env.BASE_URL ?? '/The-Levakhins-cookbook')
     sessionStorage.redirect = location.pathname;
-    location.href = location.origin;
+    location.href = location.origin + ROOT;
   </script>
 </head>
 <body>
