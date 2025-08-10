@@ -8,19 +8,21 @@
 
 
 .recipe-tile__tags-list {
-    display: flex;
-    gap: 0.5em;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: var(--gray-border);
     width: 100%;
-    padding: 0.8em 1em;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0.8em 1em;
 }
-
 .tag-item {
-    padding: 0.4em 1.2em 0.2em 1.2em;
-    font-size: clamp(0.6rem, 0.478rem + 0.61vw, 1.2rem);
     border: var(--gray-border);
     color: var(--brown);
+    padding: 0.4em 1.2em 0.2em 1.2em;
+    font-size: clamp(0.8rem, 0.678rem + 0.61vw, 1.4rem);
+    white-space: nowrap;
+
 }
 
 .recipe-tile__img-container {
