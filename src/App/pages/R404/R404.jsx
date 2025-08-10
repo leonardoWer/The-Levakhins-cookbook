@@ -9,18 +9,7 @@ import {SplitText} from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 function R404() {
-    // Логика редиректа
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-
-        if (redirect && redirect !== window.location.pathname) {
-            navigate(redirect, {replace: true}); // Используем navigate с replace: true
-        }
-    }, [navigate]);
-
 
     // Анимации
     const errorImg = useRef(null);
