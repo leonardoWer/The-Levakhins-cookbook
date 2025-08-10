@@ -20,3 +20,12 @@
     height: 40vh;
     object-position: center;
 }
+
+@media (max-width: 780px) {
+    .step-title {
+        font-size: clamp(1.4rem, 0.983rem + 2.09vw, 2rem);
+    }
+    .step-description {
+        font-size: clamp(1.2rem, 0.922rem + 1.39vw, 1.6rem);
+    }
+}

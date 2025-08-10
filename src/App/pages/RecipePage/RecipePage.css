@@ -2,6 +2,9 @@
     background: var(--light-bg);
     min-height: 100vh;
     padding: calc(80px + 4%) 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .recipe__left {
@@ -20,7 +23,7 @@
 .recipe-title-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.2em;
 }
 .recipe-title-wrapper {
     display: flex;
@@ -37,7 +40,6 @@
     font-family: var(--volante-font);
     font-size: clamp(0.8rem, 0.476rem + 1.62vw, 2.4rem);
 }
-
 .info-text {
     color: var(--light-brown);
     font-size: clamp(0.6rem, 0.357rem + 1.22vw, 1.8rem);
@@ -84,4 +86,46 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+@media (max-width: 1200px) {
+    .recipe__right {
+        width: 50%;
+    }
+    .recipe__left {
+        width: 50%;
+    }
+}
+@media (max-width: 780px) {
+    .recipe-content-container {
+        flex-direction: column;
+    }
+    .recipe__left {
+        width: 90%;
+    }
+    .recipe__right {
+        position: initial;
+        width: 100%;
+        height: 80vh;
+        padding: 0;
+        margin-top: 10vh;
+    }
+
+    /*  Текст  */
+    .recipe-title {
+        font-size: clamp(2rem, 0.748rem + 6.26vw, 3.8rem);
+    }
+    .title-label {
+        font-size: clamp(1.6rem, 0.487rem + 5.57vw, 3.2rem);
+    }
+    .info-text {
+        font-size: clamp(1rem, 0.304rem + 3.48vw, 2rem);
+    }
+
+    .topic-title-text {
+        font-size: clamp(1.8rem, 1.243rem + 2.78vw, 2.6rem);
+    }
+    .ingredients-item {
+        font-size: clamp(1.2rem, 0.922rem + 1.39vw, 1.6rem);
+    }
 }
