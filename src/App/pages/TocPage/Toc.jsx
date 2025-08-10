@@ -64,9 +64,7 @@ function Toc() {
                     ))}
                 </div>
 
-
                 <div className="toc__right">
-                    <h2 className="toc-right__title">Оглавление</h2>
 
                     <div className="toc-right__img-container">
                         <div className="img-container__content">
@@ -74,8 +72,10 @@ function Toc() {
                                 <img src="img/logo/logo.png" alt="half-book"
                                      className="img-container-content__logo-img"/>
                             </div>
-                            <h4 className="img-container-content__text" ref={logoImgText}>Наведите мышь<br/>на нужный
-                                рецепт</h4>
+                            <h4 className="img-container-content__text" ref={logoImgText}>
+                                Наведите мышь<br/>
+                                на нужный рецепт
+                            </h4>
                         </div>
 
                         <div className="img-container__recipe-img-container">
