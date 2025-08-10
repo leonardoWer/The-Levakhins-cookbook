@@ -54,8 +54,8 @@
 
 .toc-button-container {
     position: absolute;
-    bottom: 3rem;
-    right: 4rem;
+    bottom: 4em;
+    right: 4em;
 }
 
 @media (max-width: 780px) {
@@ -68,5 +68,13 @@
     }
     .description {
         width: 60%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .toc-button-container {
+        bottom: 3em;
+        right: 1.5em;
     }
 }
