@@ -73,6 +73,9 @@
     .toc-content-container {
         flex-direction: column;
     }
+    .toc__left {
+        width: 90%;
+    }
     .toc__right {
         position: initial;
         width: 100%;

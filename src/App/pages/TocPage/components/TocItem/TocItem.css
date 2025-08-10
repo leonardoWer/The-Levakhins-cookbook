@@ -33,3 +33,15 @@
     font-size: clamp(0.8rem, 0.557rem + 1.22vw, 2rem);
     cursor: pointer;
 }
+
+@media (max-width: 780px) {
+    .toc-item__number {
+        font-size: clamp(2.5rem, 0.761rem + 8.7vw, 5rem);
+    }
+    .toc-item__title {
+        font-size: clamp(1.5rem, 0.457rem + 5.22vw, 3rem);
+    }
+    .toc-item-list__recipe-item {
+        font-size: clamp(1.2rem, 0.504rem + 3.48vw, 2.2rem);
+    }
+}
