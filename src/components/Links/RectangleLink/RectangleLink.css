@@ -1,13 +1,28 @@
 .rectangle-link {
-    color: var(--light-brown);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     border: 1px solid var(--gray);
     padding: 1.8em 2.5em 1.6em 2.5em;
     font-size: clamp(0.8rem, 0.557rem + 1.22vw, 2rem);
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
 }
 
-.rectangle-link:hover {
+.rectangle-link__text {
+    color: var(--light-brown);
+    display: block;
+}
+
+.rectangle-link__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: var(--light-brown);
     color: white;
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

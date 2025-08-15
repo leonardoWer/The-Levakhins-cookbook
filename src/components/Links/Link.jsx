@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-function BaseLink({title, onClick, className}) {
+function BaseLink({children, onClick, className}, ref) {
 
     const navigate = useNavigate();
 
@@ -59,10 +59,10 @@ function BaseLink({title, onClick, className}) {
     }
 
     return (
-        <a {...linkProps}>
-            {title}
+        <a {...linkProps} ref={ref}>
+            {children}
         </a>
     );
 }
 
-export default BaseLink;
+export default React.forwardRef(BaseLink);
